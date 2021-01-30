@@ -3,11 +3,10 @@
     angular.module('LunchCheck', []).controller('LunchCheckController', LunchCheckController);
     LunchCheckController.$inject = ['$scope'];
     function LunchCheckController($scope) {
-        $scope.message = "";
+        $scope.message = "Please enter data first";
         $scope.checkLunch = function(str) {
             if (str.split(",").length > 3) { $scope.message = "Too much!"; }
-            else { $scope.message = "Enjoy!"; }
-            if (str.length == 0) { $scope.message = "Please enter data first"; }
+            if (str.split(",").length > 0 && str.split(",").length < 4) { $scope.message = "Enjoy!"; }
         };
     }
 })();
