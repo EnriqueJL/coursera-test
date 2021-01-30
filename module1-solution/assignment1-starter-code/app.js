@@ -7,7 +7,7 @@
         $scope.checkLunch = function(str) {
             if (str.split(",").length > 3) { $scope.message = "Too much!"; }
             else { $scope.message = "Enjoy!"; }
-            if (str === undefined || str == null || str == "") { $scope.message = "Please enter data first"; }
+            if (str.length == 0) { $scope.message = "Please enter data first"; }
         };
     }
 })();
