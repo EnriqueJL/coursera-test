@@ -10,7 +10,7 @@
 
     function ToBuyController(ShoppingListCheckOffService) {
         this.items = ShoppingListCheckOffService.getToBuyItems();
-        this.checkOut = function(i) { ShoppingListCheckOffService.checkOut(i); };
+        this.CheckOff = function(i) { ShoppingListCheckOffService.CheckOff(i); };
     }
 
     function AlreadyBoughtController(ShoppingListCheckOffService) {
